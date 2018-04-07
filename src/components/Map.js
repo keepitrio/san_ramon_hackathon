@@ -77,11 +77,6 @@ export class Map extends React.Component {
       events.map((event, i) => {
         var lat = parseFloat(event.venue.latitude)
         var lng = parseFloat(event.venue.longitude)
-        var date = moment(event.start.utc).format("dddd, MMMM Do YYYY, h:mmA")
-        var desc = event.description.text
-        if (event.description.text) {
-          desc = event.description.text.slice(0, 255) + '...'
-        }
 
         var marker = new google.maps.Marker({
           position: {lat: lat, lng: lng},

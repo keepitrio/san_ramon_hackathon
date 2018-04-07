@@ -6,8 +6,6 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      address: '',
-      events: [],
       coords: {
         lat: 0,
         lng: 0
@@ -22,14 +20,14 @@ export default class App extends Component {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       }
-      this.setState({ coords }, ()=>console.log(this.state))
+      this.setState({ coords })
     })
   }
 
   render() {
     return (
       <div>React simple starter
-        <Container events={this.state.events} coords={this.state.coords}/>
+        <Container coords={this.state.coords}/>
       </div>
     );
   }
