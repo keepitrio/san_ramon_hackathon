@@ -1,13 +1,17 @@
 import actions from '../actionTypes';
+import shortid from 'shortid';
 
 export function createRequest(userId, title, items, message) {
-    return {
+    let newRequestId = shortid.generate();
+    let newRequest = {
         type: actions.CREATE_REQUEST,
+        newRequestId,
         userId,
         title,
         items,
         message
     };
+    return newRequest;
 }
 
 export function editRequest(userId, title, items, message ) {
@@ -25,6 +29,12 @@ export function fetchRequest(id) {
         type: actions.FETCH_REQUEST,
         id
     };
+}
+
+export function fetchRequests() {
+    return {
+        type: actions.FETCH_REQUESTS
+    }
 }
 
 export function deleteRequest(id) {
