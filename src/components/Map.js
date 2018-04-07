@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import moment from 'moment'
 
 export class Map extends React.Component {
   constructor() {
@@ -73,7 +72,7 @@ export class Map extends React.Component {
     if (this.props && this.props.google) {
       const {google} = this.props;
       const events = this.props.events
-      var image = require('../img/leaf.png');
+      // var image = require('../img/leaf.png');
 
       events.map((event, i) => {
         var lat = parseFloat(event.venue.latitude)
@@ -93,10 +92,7 @@ export class Map extends React.Component {
 
         var contentString =
           '<div id="content">'+
-            `<h3 style="color: rgb(142, 194, 149);">${event.name.text}</h3>`+
-            '<hr>' +
-            `<h4>${date}</h4>`+
-            `<p>${desc}</p>`+
+            `<p>content</p>`+
           '</div>';
 
         var infowindow = new google.maps.InfoWindow({

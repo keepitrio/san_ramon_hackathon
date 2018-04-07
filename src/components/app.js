@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Container from './Container';
+import PropTypes from 'prop-types'
 
 export default class App extends Component {
   constructor() {
@@ -26,7 +28,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>React simple starter</div>
+      <div>React simple starter
+        <Container events={this.state.events} coords={this.state.coords}/>
+      </div>
     );
   }
 }
