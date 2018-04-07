@@ -1,25 +1,21 @@
 import actions from '../actionTypes';
 
-export function fetchRequests() {
-    return {
-        type: actions.FETCH_REQUESTS
-    };
-}
-
-export function createRequest(userId, title, message) {
+export function createRequest(userId, title, items, message) {
     return {
         type: actions.CREATE_REQUEST,
         userId,
         title,
+        items,
         message
     };
 }
 
-export function editRequest(userId, title, message ) {
+export function editRequest(userId, title, items, message ) {
     return {
         type: actions.EDIT_REQUEST,
         userId,
         title,
+        items,
         message
     };
 }
