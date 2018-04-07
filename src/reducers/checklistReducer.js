@@ -1,4 +1,4 @@
-import { FETCH_CHECKLIST, UPDATE_CHECKLIST} from '../actionCreators';
+import { FETCH_CHECKLIST, UPDATE_CHECKLIST} from '../actions';
 
 const initialState = [
   {
