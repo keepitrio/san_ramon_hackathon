@@ -1,4 +1,4 @@
-import actions from '../actions.actionTypes';
+import actions from '../actions/actionTypes';
 import shortid from 'shortid';
 
 export default function(state = {}, action) {
