@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
+import RequestReducer from './forumReducers/requestReducer';
+import OfferReducer from './forumReducers/offerReducer';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  requests: RequestReducer,
+  offers: OfferReducer
 });
 
 export default rootReducer;

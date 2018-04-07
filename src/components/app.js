@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import OffersForum from './forumComponents/OffersForum';
 
 export default class App extends Component {
   render() {
     return (
-      <div>React simple starter</div>
+      <div>
+      <OffersForum />
+      </div>
     );
   }
 }

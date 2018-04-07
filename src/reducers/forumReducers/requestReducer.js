@@ -1,4 +1,4 @@
-import actions from '../actions/actionTypes';
+import actions from '../../actions/actionTypes';
 import shortid from 'shortid';
 
 export default function(state = {}, action) {
@@ -12,7 +12,7 @@ export default function(state = {}, action) {
     case actions.EDIT_REQUEST:
       let editedRequest = { title, items, message };
       return Object.assign({}, state, {
-        requests: state.requests.map(request => request.requestId === requestId ? Object.assign({}, request, editedRequest) : request);
+        requests: state.requests.map(request => request.requestId === requestId ? Object.assign({}, request, editedRequest) : request)
       });
 
     case actions.DELETE_REQUEST:
