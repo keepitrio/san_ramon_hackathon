@@ -1,11 +1,8 @@
 import actionTypes from '../actions/actionTypes'
 import shortid from 'shortid';
 
-export default function(state, action) {
+export default function(state = {}, action) {
     const { offerId, userId, title, items, message } = action;
-    if(!state) {
-        return {};
-    }
 
     if(action.type === actionTypes.CREATE_OFFER) {
         let newOfferId = shortid.generate();
