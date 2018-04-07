@@ -20,12 +20,7 @@ class Checklist extends Component{
     const index = parseInt(e.target.getAttribute('data-index'));
     const { updateChecklist, checklist } = this.props;
     updateChecklist(index, checklist);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.checklist !== this.props.checklist) {
-      this.forceUpdate();
-    }
+    // this.forceUpdate();
   }
 
   renderCheckList() {
@@ -38,11 +33,10 @@ class Checklist extends Component{
           <div className="row">
             <div className="col-md-12">
               <input 
-                data-index= {index}
+                data-index= {line.id}
                 type="checkbox" 
                 onClick={this.handleClick} 
                 key={line.index}
-                value={line.index}
               />&nbsp;{line.item}
               <hr />
             </div>
